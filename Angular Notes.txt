@@ -1,0 +1,512 @@
+Angular src folder is the main folder where all the files and folder for the application needs to added
+
+-app folder -> contains component files where your main logic and data is defined. This app folder is inticating the app module
+
+	-app.module.ts => root module, named AppModule which is defined using a class definition and @NgModule decorator
+
+	-app.component.ts => root/first component which will be executed
+
+	-app.component.html => template for the app.component
+
+	-app.component.css => style for the component
+
+	-app.component.spec.ts => used for testing the component
+
+	-app-routing.module.ts => used for the routing/navigating between component
+
+-assets => contains files and folder that the user can access externally
+
+-favicon.ico => default icon image for the angular project
+
+-index.html => main html file to be loaded on the angular project startup. All the html contents from the components will added in this file
+
+-main.ts => main entry point for your application. First file to be compiled by the compiler into javascript and get main.js
+
+-styles.css => provide the global styling for all the components in the application
+
+--------------------
+Flow of the project ===> main.ts ==> app.module.ts ==> app.component.ts
+
+--------------------
+Component => basic building block of any angular project
+
+A component consist of 3 blocks:
+1. template ==> view ==> html
+	-> define layout and content of the view that will be displayed by the browser, without this nothing will render on the browser
+	-> template = html + angular expression/markup
+	-> you can add directives, pipes, other component templates
+	-> angular expression is used to get the data from ts file into html which is known as data binding
+	-> this template can be created without physical html file
+	-> defined using template metadata or templateUrl to specify the html file name
+
+2. class => typescript file => ts
+	-> define the logic and data which will be displayed in the view/html
+	-> this file is compulsory for each component
+
+3. styles => css
+	-> define the styles for the current component
+	-> defined directly using styles metadata or stylesUrls to specify the css file name
+--------------------------
+app.module.ts
+
+Module => way to group components, directives, pipes and service that are related to create the application
+
+Decorator ==> @NgModule, @Component, @Service
+provide the meaning to the class
+
+Root module ==> AppModule ==> class that is defined as module using @NgModule decorator
+
+class ==> class name follows PascalCase convention, where each word's first letter should be capital/uppercase and rest in lowercase
+
+By default the app module class created is local to the ts file, to make it accessible outside use export keyword before class
+
+BrowserModule is required to launch and run an application. BrowserModule itself exports CommonModule which is required to access directives like NgFor, NgIf 
+
+[] ==> indicates collection
+
+Metadata to be defined in the Module:
+-imports => declare the external module to be imported in this current module
+-declarations => declare components, directives, pipes that are part of this module
+-providers => declare services that are part of this module
+-exports => declare components, directives, pipes which are to be exported so that they can be used in some other module
+-bootstrap => declare the component that you want to load first when the module itself is loaded
+
+----------------------------
+app.component.ts
+
+This file is needed to define the component, app.component in this project will be used as root component
+
+AppComponent => class that is defined as component using @Component decorator
+
+Metadata to be defined for the Component
+-selector => tagname/elementname which will be used in index.html/other component
+
+-template => define the template that will be rendered on the browser when this component is used
+
+-styles => define the css styles to be applied on the template of the component
+---------------------------
+Comments in typescript
+1. single line comments ==> //comment
+2. multiline comments/paragraph ==> /* comment */
+
+----------------------------
+String in typescript
+
+By default, string created using '', "" are single lined. To make multiline string you can use `(backticks) operator
+
+Angular src folder is the main folder where all the files and folder for the application needs to added
+
+-app folder -> contains component files where your main logic and data is defined. This app folder is inticating the app module
+
+	-app.module.ts => root module, named AppModule which is defined using a class definition and @NgModule decorator
+
+	-app.component.ts => root/first component which will be executed
+
+	-app.component.html => template for the app.component
+
+	-app.component.css => style for the component
+
+	-app.component.spec.ts => used for testing the component
+
+	-app-routing.module.ts => used for the routing/navigating between component
+
+-assets => contains files and folder that the user can access externally
+
+-favicon.ico => default icon image for the angular project
+
+-index.html => main html file to be loaded on the angular project startup. All the html contents from the components will added in this file
+
+-main.ts => main entry point for your application. First file to be compiled by the compiler into javascript and get main.js
+
+-styles.css => provide the global styling for all the components in the application
+
+--------------------
+Flow of the project ===> main.ts ==> app.module.ts ==> app.component.ts
+
+--------------------
+Component => basic building block of any angular project
+
+A component consist of 3 blocks:
+1. template ==> view ==> html
+	-> define layout and content of the view that will be displayed by the browser, without this nothing will render on the browser
+	-> template = html + angular expression/markup
+	-> you can add directives, pipes, other component templates
+	-> angular expression is used to get the data from ts file into html which is known as data binding
+	-> this template can be created without physical html file
+	-> defined using template metadata or templateUrl to specify the html file name
+
+2. class => typescript file => ts
+	-> define the logic and data which will be displayed in the view/html
+	-> this file is compulsory for each component
+
+3. styles => css
+	-> define the styles for the current component
+	-> defined directly using styles metadata or stylesUrls to specify the css file name
+--------------------------
+app.module.ts
+
+Module => way to group components, directives, pipes and service that are related to create the application
+
+Decorator ==> @NgModule, @Component, @Service
+provide the meaning to the class
+
+Root module ==> AppModule ==> class that is defined as module using @NgModule decorator
+
+class ==> class name follows PascalCase convention, where each word's first letter should be capital/uppercase and rest in lowercase
+
+By default the app module class created is local to the ts file, to make it accessible outside use export keyword before class
+
+BrowserModule is required to launch and run an application. BrowserModule itself exports CommonModule which is required to access directives like NgFor, NgIf 
+
+[] ==> indicates collection
+
+Metadata to be defined in the Module:
+-imports => declare the external module to be imported in this current module
+-declarations => declare components, directives, pipes that are part of this module
+-providers => declare services that are part of this module
+-exports => declare components, directives, pipes which are to be exported so that they can be used in some other module
+-bootstrap => declare the component that you want to load first when the module itself is loaded
+
+----------------------------
+app.component.ts
+
+This file is needed to define the component, app.component in this project will be used as root component
+
+AppComponent => class that is defined as component using @Component decorator
+
+Metadata to be defined for the Component
+-selector => tagname/elementname which will be used in index.html/other component
+
+-template => define the template that will be rendered on the browser when this component is used
+
+-styles => define the css styles to be applied on the template of the component
+---------------------------
+Comments in typescript
+1. single line comments ==> //comment
+2. multiline comments/paragraph ==> /* comment */
+
+----------------------------
+String in typescript
+
+By default, string created using '', "" are single lined. To make multiline string you can use `(backticks) operator
+
+-----------------------------
+String Interpolation
+
+Writing some dynamic value on the html. This value is the javascript expression which will be converted into string first
+
+Variable ===> memory location in which we can store the data temporarily(RAM)
+
+Location ==> 1 byte 
+1024bytes = 1KB
+1024KB = 1MB
+1024MB = 1GB
+4/6/8/16GB
+
+Variable is associated with 3 components:
+1. value/data ==> to be stored in the memory
+2. name/identifier ==> name to identify the memory location where the value is stored
+3. datatype ==> type of the value that is stored in the variable
+
+This datatype can be fixed before the execution/runtime like in java, c++, c#,typescript or it can decided at the runtime based on the value assigned like in javascript, python, php
+
+Typescript is strongly typed language means the datatype of the variable and objects will be declared of the specify type by the programmer and then at the runtime we will have to provide the value of the given type
+
+
+Datatypes in Typescript
+Primitive
+1. string
+2. boolean
+3. number
+4. any
+5. never
+
+User-defined datatype
+1. class
+2. interface
+
+
+In javascript, three types of for loop:
+1. for(initialize; condition; updation)
+2. for..of (array)
+3. for..in (object)
+
+Objects are container that can the data in the key:value format
+
+---------------------------------------
+Data Binding
+
+1. One Way: 
+	1. Text interpolation: Display the value of the variable/expression. Data flows from typescript to html {{variablename/expression}}
+	
+	2. Property Binding: Mostly all the attributes of the html can be converted into the property, class cannot be converted into property because class is the keyword in typescript.  Custom Attribute like aria-current cannot be converted into property. Here also the data flows from typescript to html
+	
+	ngStyle ==> Attribute Directive that updates the style on the HTML element. Here the style properties needs to be provided in the key-value pair	
+	
+	3. Event Binding: 
+	Event: things that can happen to the HTML elements
+	
+	Data will flow from HTML to typescript. In Typescript we need to write the code the handle the event occuring on the html page specific to the element 
+	
+2. Two Way:
+	Mostly needed for form elements where we pass the data from the form element to variable and then we want that this variable value is binded with form element in html so that changes are reflected
+	
+	Two Way = Event Binding + Property Binding
+	
+	In Angular there is a better way to done this using ngModel directive
+	
+	To work with ngModel we will need to import FormsModule in the AppModule
+
+----------------------------------------
+Method/Function ==> piece of code / logic written to achieve some specific task. This function can be called as per the requirement. It can be reused.
+	
+Method can accept input values from the event in form of parameter, but while declaring these we need to declare their data type also.
+
+1. Required Parameter
+	Parameter to whom the value has to be passed while calling
+2. Optional/Default Parameter
+	Parameter is associated with the default, hence it is not necessary to pass the value to this parameter. But if we pass the value then default value will not be considered rather this passed value will be assigned to the parameter
+	
+	? can also be used to declare an optional parameter
+	
+-----------------------------------------------------------
+*ngIf Directive -> used to check a condition and based on the result of the condition the elements of the view will be displayed
+
+Create a condition
+1. Use a variable with the boolean
+2. Use comparision operators(<,<=,>,>=,!=,==)
+
+<ng-template>  ==> content of this is not rendered by default in the view. The decision of whether to render it is based on the structural directive
+
+<p *ngIf="condition; then template-name">
+
+<ng-template #template-name>content</ng-template> ===> this template will be rendered it the condition is true
+
+----------------------------------------------------------
+To create the user-defined datatype so that the objects created are also following the strongly typed rule of typescript we can either create class or interface
+
+Interface is mostly used to define the custom data types in the angular
+
+-----------------------------------------------------------
+
+Getter and Setter
+
+In two way data binding the getter and setter of the variable on which the binding is done is automatically created and called. But in a scenario where we want to add some extra logic whiling setting and getting the value of the variable we can write the these method as following
+
+1. For the variable on which two way data binding is done, declare a private (by default every variable and method declared inside the class is public)
+
+2. To get the value of this variable create the get method, methodName is the name that will used in the template for binding. returntype should be same as that of the variable whose value this method will return 
+
+	get methodName():returntype{
+		return value;
+	}
+	
+3. To set the value of this variable create the set method, methodName is the name that will be used in the template for binding. a parameter has to defined which will get the value from the template
+
+	set methodName(parameter:datatype){
+		//set the value of the variable
+	}
+
+---------------------------------------------
+Pipes
+
+Are used for transforming the data displayed on the HTML. Pipes will take the row data and will transform it based on the pipe applied
+
+Pipe is applied using | (pipe/bar) symbol on the data
+
+---------------------------------------------
+Directive are components but without any template of their own, rather directive is used to manipulate or add the behaviour to the elements of the component
+
+Built-in Directive
+1. Component ==> most commonly used to add component using selector of the component
+2. Attribute ==> NgClass, NgStyle, NgModel
+3. Structural ==> NgFor, NgIf
+
+User-defined Directive
+ng g d directivename
+
+Used @Directive decorator and also specified the selector that will be used as the directive name with the component element
+
+----------------------------------------------
+Nested Component
+
+One component within the another component
+
+ng g c star ===> here the star component will be added in app component
+
+ng g c product-list/star ==> here the star component will be added in product-list component
+
+----------------------------------------------
+Parent to Child Component Communication
+
+To pass the data from the parent to the child component, we will use @Input decorator
+
+We will mark property of the child component using this decorator and then will use this in the parent component as the property to receive the value
+
+The value from the parent will pass to the child using property binding, the input variable of the child component will the property to get the value from the parent
+
+-----------------------------------------------
+Child to Parent Component Communication
+
+To pass the data from the child to the parent component, we will use @Output decorator
+
+This output variable will be an EventEmitter which will emit the value to the parent
+
+EventEmitter: its a property which helps in exposing an event when the child wants to interact with the parent
+
+The parent component will listen to this event by child and will act accordingly.
+
+The parent component will consume the value emitted by the child component using $event parameter and pass it event handler method of the parent component
+
+This output variable of the child component has become the event that will be handled by the parent
+
+----------------------------------------------
+Hook Methods
+
+ngOnInit() ===> is called only once for each component
+
+ngOnChanges() ===> is called everytime the value of the input property of the component is changed
+
+-----------------------------------------------
+Service(Helper)
+
+As the name suggest this file is going to provide the service to the component, directive or to other service. 
+
+It is reuseable code means multiple component or directive can use the same service at a time
+
+A piece of code created to achieve a specific task
+
+Adding all the code in the component will make you component very heavy and loading your component will be time consuming. Rather than dealing with main functionality in the component itself we can separate this in the service and then use the service in the component
+
+We cannot use service directly in the component, directive or other service. 
+
+In order to use service we will need to inject the service in the component
+-------------------------------------------------
+
+Dependency Injection
+
+Component wants to use the functionality or resource declared in the service that means the component is dependent on the service for its own functionality. 
+
+Now this service on which component is dependent on needs to be injected in the component using the concept of dependency injection.
+
+Dependency injection is a technique in which a class(component) recieves its dependencies from the external source(service) rather than creating them on itw own.
+
+Advantage of DI:
+1. loose coupled: all the functionality is divided into different service and now only those functionality will be available to us which are required in the component
+2. reuseable: same service can be reused in multiple components
+
+Component/Elements of DI:
+1. Consumer: Component/Directive/Service that needs the service and will inject the service. This dependency injection will be implement using the constructor of the class  eg. gpay
+2. Dependency: service/ functionality inside the service that is required by the consumer eg. upi
+3. Injection Token: will be the unique identification of the dependency in the consumer class. Injection token is created in the consumer class using the constructor of that class
+4. Provider: one who maintains the list of the dependencies and who can use that dependencies
+5. Injector: injector is responsible to find the dependencies and inject them wherever required
+
+-----------------------------------------
+RxJS (Reactive Javascript) Library
+
+Support to this library is by default present in the Angular framework.
+
+Two ways of executing the javascript/typescript:
+
+1. synchronous => every statement in a function is executed sequenctially. Here js maintain a call stack to execute the functions
+2. asynchronous => statement can be executed simultanouslty
+
+In RxJS we follow a design pattern observable
+
+CCTV ==> Observable ==> Content that CCTV camera capture
+TV ==> Subscriber ==> Display the content captured by CCTV
+Phone ==> Subscriber ==> Display the content captured by CCTV
+
+Observable ==> Producer
+Subscriber ==> Consumer
+
+The components of RxJS:
+Observable ==> Function that will convert the ordinary data stream into observable data stream. Will emit the values one by one. Is lazy by nature, they will not provide the data until someone subscribe to them
+
+Subscriber(Operator) ==> Observable on its own is useless unless someone uses its functionality or the value that it emits.
+
+Observer ==> The data emitted by the observable is actually generated by the observer. So observer creates the data and this data is made available to the subscriber by the observable after subsription
+
+	next() ==> is used by observer to generate the next data that is given to the subscriber using observable
+
+	() ==> is used to  indicate to the observable that observer has ended the data creation and same can be indicated to the subscriber
+
+Operator ==> Used to perform some task on the observable. There are two types of operators
+
+	Creation Operator ==> Used to create the observable
+	
+	Pipeable Operator ==> Used to perform some task on the observable. Called pipeable because we can use multiple operator at a time in the pipe format. These operator does not change the original observable rather they create a new observable
+	
+	pipe(op1(), op2(), op3(),...)
+	Only the op1() will work on the original observable.
+	Output of the op1() will become the input for the op2()
+	Output of the op2() will become the input for the op3() and so on
+
+Subject ==> Special type of the observable that allows the values to be multicasted to many Subscribers. 
+
+While plain Observable is unicast(each subscription to the observable a new independent execution paths will start of that observable) Here will get all the values of the observable
+
+Subject is multicasted means for each subscription only one execution path of the observable will be created rather creating the new execution for every subscription. 
+
+Subject will be broadcasting the data to all the subscribers
+
+Just like in observable we can emit the data using next(), we can use complete(), error() method
+
+In Observable the value is emitted inside the observable but in the subject the value is emitter outside the observable
+
+
+Create Observable :
+variable, using the convention where the variable name is suffixed with $
+can be created using create operator to create the observable
+
+async pipe ==> make the task of subscribe and unsubscribe automatically
+
+-------------------------------
+API Integration
+
+We are create front-end application using angular but the data of the database cannot be accessed directly by angular. For database we normally create the backend application which is mostly rest api to work with database. From the angular application we can access this rest api using HttpClient service that is available in the angular itself
+
+HttpClient service can give ajax calls to the rest api and is copmpletely integrated with rxjs.
+
+We will try to access and api using HttpClient in return we will an observable which can then be subscribed.
+
+--------------------------------
+Routing & Navigation
+
+Single Page Application(SPA) ==> There is only one html page and we navigate to the component within that html page only. For this we will using routes
+
+Multiple Page Application(MPA) ==> Multiple page that can be navigated using the anchor tag, by creating hyperlinks
+
+Routing
+-allows you to move from one page(component) to another in the application
+-routing is handled Angular Routing Module
+-Routing provides the services and directives needed to add navigation/routing within the application
+
+Components of RouterModule
+
+Router: service which enables the navigation from one component to another using the Routes array
+
+Route: which component is accessible by which url pattern. First we define the route for each component. Route is nothing by the url pattern that if used by the user should display the corresponding component
+
+Routes: it is an array to store multiple routes for multiple components. Here we will combine all the route
+
+RouterOutlet: acts like a placeholder where the routed component should be displayed
+
+RouterLink: it is a directive which we will use in place of href to specify the url that needs to be binded with the component
+
+RouterLinkActive: it is a directive using which we can apply multiple css classes on the active route
+
+ActivatedRoute: it is the service that represents the currectly active route associated with the loaded component
+
+Router: it is a service which can be used to dynamically route from one component to another
+
+-------------------------------------
+Six Phase applied to the form control by the angular as the class:
+
+					class if false	class if true
+Control is touched	ng-untouched	ng-touched
+Control is visited	ng-pristine		ng-dirty
+Control is valid	ng-invalid		ng-valid
+
+

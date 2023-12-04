@@ -1,0 +1,79 @@
+Angular is front-end framework where appications are created using HTML, CSS and Typescript
+
+Frontend
+-client-side
+-user interface
+-presentation
+
+Backend
+-created using python, java, php, .net
+-input/output processing
+-calculations
+-database interaction
+-basically for main logic of the application 
+
+Typescript is the superset of the Javascript programming language which will be transpiled into Javascript as the browers cannot execute the typescript code. 
+
+Why Angular?
+
+Expressive HTML => template engine, template will remain same but data will change. The template is nothing but HTML and using the template statement we can add data into HTML.
+
+Powerful Data Binding => Data is bound to HTML, when the data is changing anywhere the effect is render immediatially.  Data can also be send as the input from HTML using the events
+
+Modular By Design => A module is used to group the related components, pipes, directives
+
+Built-in Back-End Integration => Has built-on support to interact with the back end frameworks to get the data 
+
+Detailed documentation => Angular offical site provides the details infomation about each topic for the project creation
+
+Supported by Google => Angular is create by the Google's angular team and constant support is provide via many support sites like stackoverflow
+
+Component-based architecture => it is the main building block of an angular applciation.
+		- it contains data and user interaction logic which defines how the 
+		view looks and behave
+
+AOT compiler => Angular ahead-of-time (AOT) compiler converts your Angular HTML and TypeScript code into efficient JavaScript code during the build phase before the browser downloads and runs that code. Compiling your application during the build process provides a faster rendering in the browser.
+
+There are two types of compiler:
+JIT compiler => used in the development stage, used to understand the error and the code is compiler in the browser
+AOT compiler => used in the production, where code is compiled in the server and the compiled code is returned to the browser
+
+Angular 9 onwards its only AOT Compiler
+
+Great CLI Support => Angular provide support for creating the boilerplate code using the CLI. Everything can be created using CLI so that developer just concentrates on the core business logic.
+
+Angular Elements => Angular can create new HTML elements(tag) and give the meaning to that elements
+
+Ivy Renderer => Added in Angular 6, reduces the unnecessary code and make code efficient
+
+Angular Material => Angular Material offers you reusable and beautiful UI components like Cards, Inputs, Data Tables, Datepickers
+
+Mobile/Hybrid Apps support => Hybrid App are like facebook which can be used from browser as well as the can be downloaded as the application
+
+PWAs (Progressive Web Apps) => Web Applications that can be downloaded and also provide offline support
+-----------------------------------------------
+
+Angular Installation
+
+For installing angular first you need to install node js application as it include the npm tool required from installation.
+
+To check node and npm is installed 
+node -v
+npm -v
+
+npm install -g @angular/cli
+
+------------------------------------------------
+Create first angular project
+
+First create a folder where this angular project folder has to be created
+
+Click on the address bar of the file system and type cmd
+
+Command Prompt will be opened with the current path directory selected
+
+Now type ng new first-app
+
+All the files needed for the project will be created in the project folder
+
+Now open this folder in VS Code for exploring the project structure
